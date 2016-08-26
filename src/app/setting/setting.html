@@ -1,0 +1,40 @@
+<div class="container">
+    <acme-navbar creation-date="main.creationDate"></acme-navbar>
+        <div class="row clearfix">
+          <div class="col-xs-3"></div>
+          <div class="col-xs-6" align="center">
+            <h2>Create sequence</h2>
+          <tr>
+          <hr>
+            <table class="table table-bordered table-hover" id="tab_logic">
+                    <tr >
+                        <th class="text-center">Option</th>
+                        <td><input type="text" ng-model="setting.option" class="form-control"/></td>                            
+                    </tr>
+
+                    <tr >
+                        <th class="text-center">Prefix</th>
+                        <td><input type="number" ng-model="setting.prefix" class="form-control"/></td>                            
+                    </tr>
+
+                    <tr>
+                        <th class="text-center">Suffix</th> 
+                        <td><input type="number" ng-model="setting.suffix" class="form-control"/></td>  
+                    </tr>
+                    <tr>
+                        <th class="text-center">Next number</th>
+                        <td><input type="number" ng-model="setting.nextnumber" class="form-control"/></td>
+                    </tr>
+
+                    <tr>
+                        <th class="text-center">Increase</th>
+                        <td><input type="number" ng-model="setting.increase" class="form-control"/></td>
+                    </tr>
+            </table>             
+          </tr>   
+        <tr>
+            <th class="text-center"> <button ng-click="save()" class="btn btn-default" style="width: 85px" type="button">Save</button></th> 
+        </tr>                
+    </div>
+</div>
+</div>

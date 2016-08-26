@@ -17,7 +17,10 @@
     "angular-toastr": "~1.5.0",
     "moment": "~2.10.6",
     "animate.css": "~3.4.0",
-    "angular": "~1.5.3"
+    "angular": "~1.5.3",
+    "JsBarcode": "^3.3.20",
+    "angular-io-barcode": "^1.0.4",
+    "angular-local-storage": "^0.4.0"
   },
   "devDependencies": {
     "angular-mocks": "~1.5.3"
