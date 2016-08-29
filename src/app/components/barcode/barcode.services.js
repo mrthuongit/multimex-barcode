@@ -16,6 +16,9 @@
       var barcode = '';
       switch (options) {
         case 'ean13':
+          if(!suffix){
+            suffix = "";
+          }
           var numberA = 0;
           var numberB = 0;
           var missLength = 12 - (prefix.toString().length + suffix.toString().length);

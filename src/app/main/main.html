@@ -10,26 +10,26 @@
         <table class="table table-bordered table-hover" id="tab_logic">
           <tr>
             <th class="text-center">Product Name</th>
-            <td><input type="text" ng-model="name" placeholder='enter' class="form-control"/></td>
+            <td><input type="text" ng-model="product.name" placeholder='name' class="form-control"/></td>
           </tr> 
               
           <tr>
             <th class="text-center" >Product Price</th>
-            <td><input type="text" ng-model="price" placeholder='enter' class="form-control"/></td>
+            <td><input type="number" ng-model="product.price" placeholder='price' class="form-control"/></td>
           </tr>
         
           <tr>
             <th class="text-center">Barcode</th>
             <td>
               <input type="text" ng-model="code" placeholder='enter' class="form-control" disabled/>
-              <io-barcode style="margin-top: 10px;" code="{{ code }}" type="{{ type }}" options="options"></io-barcode>
+              <io-barcode id="imageBarcode" style="margin-top: 10px;" code="{{ code }}" type="{{ type }}" options="options"></io-barcode>
             </td>           
           </tr>
         </table>
 
         <div align="center">
           <button ng-click="generateBarcode()" class="btn btn-default btn-md" style="width: 85px;">Generate</button>
-          <input type="button" id="print" value="Print" class="btn btn-default" style="width: 85px;" onclick="window.print()"> 
+          <a type="button" id="saveBarcode" class="btn btn-default" style="width: 85px;" ng-click="saveImageBarcode()"> Save as</a>
         </div>
       </div>
   </div>

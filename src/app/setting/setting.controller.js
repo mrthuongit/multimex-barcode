@@ -14,7 +14,10 @@
     } else{
       $scope.setting={
         option: "EAN13",
-        prefix: 1
+        prefix: 1,
+        nextnumber: 1,
+        increase: 1,
+        suffix: null
       };
     }
     $scope.count="1";
@@ -32,9 +35,6 @@
 
       }
       if(!$scope.setting.option || $scope.setting.option.length === 0){
-        flag = false;
-      }
-      if(!$scope.setting.suffix){
         flag = false;
       }
       if(!$scope.setting.nextnumber || $scope.setting.nextnumber <= 0){

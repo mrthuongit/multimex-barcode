@@ -1,7 +1,9 @@
 {
   "name": "barcode",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "gulp-nw-builder": "^1.3.1"
+  },
   "scripts": {
     "test": "gulp test"
   },

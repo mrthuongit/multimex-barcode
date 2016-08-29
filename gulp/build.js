@@ -3,6 +3,7 @@
 var path = require('path');
 var gulp = require('gulp');
 var conf = require('./conf');
+var builder = require('gulp-nw-builder');
 
 var $ = require('gulp-load-plugins')({
   pattern: ['gulp-*', 'main-bower-files', 'uglify-save-license', 'del']
@@ -95,3 +96,15 @@ gulp.task('clean', function () {
 });
 
 gulp.task('build', ['html', 'fonts', 'other']);
+
+
+gulp.task('buildnw', ['html', 'fonts', 'other'], function() {
+  return gulp.src([path.join(conf.paths.dist, '/**/*')])
+    .pipe(builder({
+        version: '0.12.2',
+        platforms: ['win32'],
+        appName: "Multimex barcode",
+        appVersion: "1.0.1"
+     }));
+});
+
